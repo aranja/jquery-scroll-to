@@ -1,0 +1,19 @@
+{
+  "name": "tux-scroll-to",
+  "version": "1.0.0",
+  "description": "Smoothly scroll to location on current page.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aranja/tux-scroll-to"
+  },
+  "keywords": [
+    "tux"
+  ],
+  "author": "Aranja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aranja/tux-scroll-to/issues"
+  },
+  "homepage": "https://github.com/aranja/tux-scroll-to"
+}
