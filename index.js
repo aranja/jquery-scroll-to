@@ -1,4 +1,5 @@
 'use strict';
+var $ = require('jquery');
 
 /**
  * Smoothly scroll to location on current page.

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aranja/tux-scroll-to/issues"
   },
-  "homepage": "https://github.com/aranja/tux-scroll-to"
+  "homepage": "https://github.com/aranja/tux-scroll-to",
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
 }
