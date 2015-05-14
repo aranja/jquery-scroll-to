@@ -43,7 +43,7 @@ ScrollTo.prototype.clickHandler_ = function(event) {
 
   event.preventDefault();
 
-  $(this.options.scrollContainer).animate({
+  $(this.options.scrollContainer).stop().animate({
     scrollTop: this.target.offset().top - this.options.offset
   }, this.options);
 };
