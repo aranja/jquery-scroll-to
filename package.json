@@ -1,6 +1,6 @@
 {
   "name": "tux-scroll-to",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Smoothly scroll to location on current page.",
   "main": "index.js",
   "repository": {
