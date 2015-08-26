@@ -8,15 +8,17 @@ var $ = require('jquery');
  * @constructor
  */
 function ScrollTo(el, options) {
-  this.el = $(el);
-  this.target = $(this.el.attr('href'));
+  this.element = $(el);
+  this.target = $(this.element.attr('href'));
   this.options = $.extend({}, ScrollTo.DEFAULTS_, options);
 
   if (typeof this.options.offset === 'string') {
-    this.options.offset = $(this.options.offset).height();
+    this.offset = $(this.options.offset).height();
+  } else {
+    this.offset = this.options.offset;
   }
 
-  this.el.on('click', this.clickHandler_.bind(this));
+  this.element.on('click', this.clickHandler_.bind(this));
 }
 
 /**
@@ -43,8 +45,12 @@ ScrollTo.prototype.clickHandler_ = function(event) {
 
   event.preventDefault();
 
+  if ($.isFunction(this.options.offset)) {
+    var offset = this.options.offset(this);
+  }
+
   $(this.options.scrollContainer).stop().animate({
-    scrollTop: this.target.offset().top - this.options.offset
+    scrollTop: this.target.offset().top - offset
   }, this.options);
 };
 
